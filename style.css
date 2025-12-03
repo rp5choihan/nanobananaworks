@@ -1,1 +1,125 @@
-:root {    --color-primary: #FFD700;    --color-bg-main: #1A1A1A;    --color-surface: #252525;    --color-border: #3E3E3E;    --color-neon-blue: #00F0FF;    --color-neon-pink: #FF00AA;    --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);}body {    background-color: var(--color-bg-main);}/* Custom Scrollbar */::-webkit-scrollbar {    width: 6px;    height: 6px;}::-webkit-scrollbar-track {    background: var(--color-bg-main);}::-webkit-scrollbar-thumb {    background: var(--color-border);    border-radius: 3px;}::-webkit-scrollbar-thumb:hover {    background: #555;}/* Text Gradients */.text-gradient-banana {    background: linear-gradient(135deg, #FFD700 0%, #FFF 100%);    -webkit-background-clip: text;    -webkit-text-fill-color: transparent;}/* Card Hover Effects */.template-card {    transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s ease, border-color 0.3s ease;    border: 1px solid transparent;    opacity: 0; /* Initial state for JS Animation */}.template-card:hover {    transform: translateY(-4px);    border-color: var(--color-primary);    box-shadow: 0 10px 30px -10px rgba(255, 215, 0, 0.15);}.template-card .hover-overlay {    opacity: 0;    transition: opacity 0.2s ease;}.template-card:hover .hover-overlay {    opacity: 1;}/* Inputs & Forms */.input-group label {    font-size: 0.875rem;    color: #A0A0A0;    margin-bottom: 0.5rem;    display: block;    font-weight: 600;}.custom-input {    background: #111;    border: 1px solid var(--color-border);    color: white;    padding: 0.75rem;    border-radius: 0.25rem;    width: 100%;    transition: all 0.2s;    font-size: 0.9rem;}.custom-input:focus {    border-color: var(--color-primary);    outline: none;    box-shadow: 0 0 0 1px var(--color-primary);}/* Model Selection */.model-card {    transition: all 0.2s ease;}.model-card.selected {    border-color: var(--color-primary) !important;    background-color: rgba(255, 215, 0, 0.05) !important;    box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);}/* Magic Editor Banner */.magic-banner {    background: radial-gradient(circle at top right, rgba(0, 240, 255, 0.1), transparent 40%),                radial-gradient(circle at bottom left, rgba(255, 0, 170, 0.1), transparent 40%),                linear-gradient(to bottom, #252525, #1A1A1A);    border: 1px solid rgba(255, 255, 255, 0.05);}/* Tab Animation */.tab-item.active {    color: var(--color-primary);    border-bottom-color: var(--color-primary);}/* Terminal / Console Logs */.terminal-log {    font-family: 'JetBrains Mono', monospace;    font-size: 0.75rem;    line-height: 1.6;    color: #4ade80; /* Tailwind green-400 */    text-shadow: 0 0 5px rgba(74, 222, 128, 0.3);    overflow-y: auto;}.terminal-log::-webkit-scrollbar {    width: 4px;}
+:root {
+    --color-primary: #FFD700;
+    --color-bg-main: #1A1A1A;
+    --color-surface: #252525;
+    --color-border: #3E3E3E;
+    --color-neon-blue: #00F0FF;
+    --color-neon-pink: #FF00AA;
+    --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+
+body {
+    background-color: var(--color-bg-main);
+}
+
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: var(--color-bg-main);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* Text Gradients */
+.text-gradient-banana {
+    background: linear-gradient(135deg, #FFD700 0%, #FFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* Card Hover Effects */
+.template-card {
+    transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 1px solid transparent;
+    opacity: 0; /* Initial state for JS Animation */
+}
+.template-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-primary);
+    box-shadow: 0 10px 30px -10px rgba(255, 215, 0, 0.15);
+}
+.template-card .hover-overlay {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+.template-card:hover .hover-overlay {
+    opacity: 1;
+}
+
+
+/* Inputs & Forms */
+.input-group label {
+    font-size: 0.875rem;
+    color: #A0A0A0;
+    margin-bottom: 0.5rem;
+    display: block;
+    font-weight: 600;
+}
+.custom-input {
+    background: #111;
+    border: 1px solid var(--color-border);
+    color: white;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    width: 100%;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+}
+.custom-input:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+
+/* Model Selection */
+.model-card {
+    transition: all 0.2s ease;
+}
+.model-card.selected {
+    border-color: var(--color-primary) !important;
+    background-color: rgba(255, 215, 0, 0.05) !important;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
+}
+
+
+/* Magic Editor Banner */
+.magic-banner {
+    background: radial-gradient(circle at top right, rgba(0, 240, 255, 0.1), transparent 40%),
+                radial-gradient(circle at bottom left, rgba(255, 0, 170, 0.1), transparent 40%),
+                linear-gradient(to bottom, #252525, #1A1A1A);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+
+/* Tab Animation */
+.tab-item.active {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+}
+
+
+/* Terminal / Console Logs */
+.terminal-log {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    line-height: 1.6;
+    color: #4ade80; /* Tailwind green-400 */
+    text-shadow: 0 0 5px rgba(74, 222, 128, 0.3);
+    overflow-y: auto;
+}
+.terminal-log::-webkit-scrollbar {
+    width: 4px;
+}
